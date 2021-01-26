@@ -17,6 +17,7 @@ public class DemoApi {
 
     @Autowired
     DemoService demoService;
+
     @GetMapping("/")
     public Response click() {
         demoService.insert();

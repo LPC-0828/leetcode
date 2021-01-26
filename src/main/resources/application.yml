@@ -9,7 +9,24 @@ server:
       max: 1000
 spring:
   datasource:
-    task:
-      url: jdbc:mysql://localhost:3306/click?characterEncoding=utf-8
-      username: root
-      password: Pass1234
+    url: jdbc:mysql://localhost:3306/click?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&autoReconnectForPools=true&useSSL=false&serverTimezone = Asia/Shanghai
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      validationQuery: SELECT 1
+      test-while-idle: true
+      test-on-borrow: true
+      test-on-return: false
+      filter:
+        stat:
+        log-slow-sql: true # 开启慢sql记录
+        slow-sql-millis: 1
+mybatis:
+  type-aliases-package: com.rt.demo.model
+  mapper-locations: classpath:mapper/*Mapper.xml
