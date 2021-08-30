@@ -1,4 +1,4 @@
-package com.rt.demo.lch;
+package com.leetcode.demo.lpc;
 
 import org.junit.Test;
 
@@ -6,8 +6,8 @@ import org.junit.Test;
  * <p>
  * <p/>
  *
- * @author Lch
- * @date: 2021.08.30 09:51
+ * @author Ray
+ * @date: 2021.08.30 09:52
  */
 public class c1 {
 

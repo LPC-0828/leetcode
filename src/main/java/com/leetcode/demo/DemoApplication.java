@@ -1,4 +1,4 @@
-package com.rt.demo;
+package com.leetcode.demo;
 
 
 import org.springframework.boot.SpringApplication;

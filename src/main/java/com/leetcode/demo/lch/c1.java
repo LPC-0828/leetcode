@@ -1,4 +1,4 @@
-package com.rt.demo.ycq;
+package com.leetcode.demo.lch;
 
 import org.junit.Test;
 
@@ -6,7 +6,7 @@ import org.junit.Test;
  * <p>
  * <p/>
  *
- * @author Ycq
+ * @author Lch
  * @date: 2021.08.30 09:51
  */
 public class c1 {
