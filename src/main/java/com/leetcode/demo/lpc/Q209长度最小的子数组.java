@@ -2,6 +2,8 @@ package com.leetcode.demo.lpc;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * <p>
  * 给定一个含有n个正整数的数组和一个正整数 target 。
@@ -83,5 +85,39 @@ public class Q209长度最小的子数组 {
             }
         }
         return c;
+    }
+
+    /**
+     * 先对数组做处理 挨个计算和 重新弄出一个数组
+     * 再用tar挨个加 找到第一个比tar大的位置 这个位置到当前下标位置 就是最短距离
+     * @param s
+     * @param nums
+     * @return
+     */
+    public int minSubArrayLen二分(int s, int[] nums) {
+        int n = nums.length;
+        if (n == 0) {
+            return 0;
+        }
+        int ans = Integer.MAX_VALUE;
+        int[] sums = new int[n + 1];
+        // 为了方便计算，令 size = n + 1
+        // sums[0] = 0 意味着前 0 个元素的前缀和为 0
+        // sums[1] = A[0] 前 1 个元素的前缀和为 A[0]
+        // 以此类推
+        for (int i = 1; i <= n; i++) {
+            sums[i] = sums[i - 1] + nums[i - 1];
+        }
+        for (int i = 1; i <= n; i++) {
+            int target = s + sums[i - 1];
+            int bound = Arrays.binarySearch(sums, target);
+            if (bound < 0) {
+                bound = -bound - 1;
+            }
+            if (bound <= n) {
+                ans = Math.min(ans, bound - (i - 1));
+            }
+        }
+        return ans == Integer.MAX_VALUE ? 0 : ans;
     }
 }
