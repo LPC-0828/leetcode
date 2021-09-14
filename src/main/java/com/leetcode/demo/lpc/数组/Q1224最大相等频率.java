@@ -1,4 +1,4 @@
-package com.leetcode.demo.lpc;
+package com.leetcode.demo.lpc.数组;
 
 import org.junit.Test;
 
