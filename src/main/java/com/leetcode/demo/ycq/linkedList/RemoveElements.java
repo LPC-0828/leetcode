@@ -1,4 +1,4 @@
-package com.leetcode.demo.ycq;
+package com.leetcode.demo.ycq.linkedList;
 
 import org.junit.Before;
 import org.junit.Test;

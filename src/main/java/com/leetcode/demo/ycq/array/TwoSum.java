@@ -1,4 +1,4 @@
-package com.leetcode.demo.ycq;
+package com.leetcode.demo.ycq.array;
 
 import org.junit.Test;
 
